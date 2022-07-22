@@ -31,8 +31,8 @@
 			try
 			{	
 				$this->open_db();
-				$query=$this->condb->prepare("INSERT INTO product VALUES (?, ?, ?, ?, ?)");
-				$query->bind_param("ssissi",$obj->id,$obj->name, $obj->price, $obj->details, $obj->image1,$obj->productID);
+				$query=$this->condb->prepare("INSERT INTO product VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+				$query->bind_param("ssissssi",$obj->id,$obj->name, $obj->price, $obj->details, $obj->image1, $obj->image2, $obj->image3, $obj->producerID);
 				$query->execute();
 				$res= $query->get_result();
 				$last_id=$this->condb->insert_id;

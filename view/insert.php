@@ -56,7 +56,7 @@
                         </div>
                         <div class="form-group">
                             <label>Producer ID</label>
-                            <input type="text" name="producerID" class="form-control">
+                            <input type="text" name="producer" class="form-control">
                         </div>
                 </div>
                         <input type="submit" name="addbtn" class="btn btn-primary" value="Submit">
