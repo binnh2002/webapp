@@ -1,7 +1,7 @@
 <?php
         require '../model/product.php'; 
         session_start();             
-        $sporttb=isset($_SESSION['producttbl0'])?unserialize($_SESSION['producttbl0']):new Product();            
+        $producttb=isset($_SESSION['producttbl0'])?unserialize($_SESSION['producttbl0']):new Product();            
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +24,7 @@
                     <div class="page-header">
                         <h2>Update Product</h2>
                     </div>
-                    <p>Please fill this form and submit to add sports record in the database.</p>
+                    <p>Please fill this form and submit to add product record in the database.</p>
                     <form action="../index.php?act=update" method="post" >
                         <div class="form-group">
                             <label>Product ID</label>
@@ -48,9 +48,8 @@
                         </div>
                         <div class="form-group">
                             <label>Producer</label>
-                            <input type="text" name="producer" class="form-control" value="<?php echo $producttb->$producerID; ?> ">
+                            <input type="text" name="producer" class="form-control" value="<?php echo $producttb->producerID; ?> ">
                         </div>
-                        <input type="hidden" name="id" value="<?php echo $sporttb->id; ?>"/>
                         <input type="submit" name="updatebtn" class="btn btn-primary" value="Submit">
                         <a href="../index.php" class="btn btn-default">Cancel</a>
                     </form>
